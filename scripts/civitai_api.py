@@ -648,7 +648,7 @@ def update_model_info(model_string=None, model_version=None, only_html=False, in
                             break
                     
                 model_availability = selected_version.get('availability', 'Unknown')
-                model_date_published = selected_version.get('publishedAt', '').split('T')[0]
+                model_date_published = (selected_version.get('publishedAt') or '').split('T')[0]
                 version_name = selected_version['name']
                 version_id = selected_version['id']
 
